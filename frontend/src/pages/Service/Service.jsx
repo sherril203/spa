@@ -1,9 +1,9 @@
 import React from 'react'
-import massage from '../assets/massage.jpg'
-import nailing from '../assets/nailing.jpg'
-import wax from '../assets/waxing.jpg'
-import makeup from '../assets/makeup.png'
-import hair from '../assets/haircut.jpg'
+import massage from '../../assets/massage.jpg'
+import nailing from '../../assets/nailing.jpg'
+import wax from '../../assets/waxing.jpg'
+import makeup from '../../assets/makeup.png'
+import hair from '../../assets/haircut.jpg'
 const Service = () => {
     const Services = [
       { name: "Massage", img: massage },
