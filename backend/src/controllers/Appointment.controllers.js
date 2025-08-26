@@ -1,4 +1,4 @@
-const AppointmentModel = require("../models/Appointment.model");
+const AppointmentModel = require("../model/Appointment.model");
 
 const postAppointment = async (req, res) => {
   try {

@@ -1,4 +1,4 @@
-const QueriesModel = require("../models/queries.model");
+const QueriesModel = require("../model/queries.model");
 
 const postQueries = async (req, res) => {
   try {
