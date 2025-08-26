@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
 const Testinomial = () => {
   const [data, setData] = useState([]);
   const [formdata, setformdata] = useState({
@@ -16,7 +16,7 @@ const Testinomial = () => {
 
     try {
       const response = await axios.post("http://localhost:4050/postquery", formdata);
-      alert("Your feedback/query has been submitted");
+      toast.success("Your feedback/query has been submitted");
 
       const newItem = response.data.data || response.data;
       setData((prev) => (Array.isArray(prev) ? [...prev, newItem] : [newItem]));
@@ -57,6 +57,7 @@ const Testinomial = () => {
 
   return (
     <div className="bg-emerald-50 min-h-screen flex flex-col justify-center items-center px-4 py-10">
+      <ToastContainer/>
       <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-md w-full max-w-lg">
         <h2 className="text-center font-bold text-3xl text-emerald-800 mb-6">
           Feedback / Queries Form

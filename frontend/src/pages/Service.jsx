@@ -1,9 +1,9 @@
 import React from 'react'
-import massage from '../../assets/massage.jpg'
-import nailing from '../../assets/nailing.jpg'
-import wax from '../../assets/waxing.jpg'
-import makeup from '../../assets/makeup.png'
-import hair from '../../assets/haircut.jpg'
+import massage from '../assets/massage.jpg'
+import nailing from '../assets/nailing.jpg'
+import wax from '../assets/waxing.jpg'
+import makeup from '../assets/makeup.png'
+import hair from '../assets/haircut.jpg'
 const Service = () => {
     const Services = [
       { name: "Massage", img: massage },
@@ -13,7 +13,7 @@ const Service = () => {
       { name: "Nailing", img: nailing }
     ]
  return (
-    <div className="bg-emerald-100 min-h-screen py-12 px-4 sm:px-8">
+    <div className="bg-emerald-100 min-h-screen py-1 px-4 sm:px-8">
       <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-[#333] mb-10">
         Our Services
       </h2>

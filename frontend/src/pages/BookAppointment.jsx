@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
 const BookAppointment = () => {
   const [data, setData] = useState([]);
   const [formdata, setformdata] = useState({
@@ -15,32 +15,29 @@ const BookAppointment = () => {
   // POST API
 const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log("Form Data:", formdata);
 
   try {
     const response = await axios.post("http://localhost:4050/postAppointment", formdata);
-
-    console.log("POST response:", response.data);
-    alert("Appointment is booked for you ");
-
+    console.log(response.data.data)
+  //alert("Appointment booked successfully!");
+    toast.success("Appointment booked successfully!");
     setData((prev) => (Array.isArray(prev) ? [...prev, formdata] : [formdata]));
-
-    // reset form
     setformdata({
       name: "",
       email: "",
       mobile_no: "",
-      gender:"",
-      Service:"",
+      gender: "",
+      Service: "",
       Appointment_date: "",
     });
-
-    // or fetch fresh data from backend if needed
     getAppointment();
   } catch (error) {
     console.error("Error in post api:", error.message);
+    toast.error("Failed to book appointment. Please try again.");
   }
 };
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,7 +62,9 @@ const handleSubmit = async (e) => {
   }, []);
 
   return (
+    
       <div className="bg-emerald-200 min-h-screen flex flex-col justify-center items-center px-4 py-10">
+      <ToastContainer />
       <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-lg w-full max-w-lg">
         <h2 className="text-center font-bold text-3xl text-[#333] mb-6">
           Book Your Appointment
