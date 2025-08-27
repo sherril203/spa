@@ -1,31 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import medi from '../assets/nailing.jpg';
+import hair from '../assets/haircut.jpg';
 
-const Medicure = () => {
+const Haircut = () => {
   const service = {
-    name: "Medicure",
-    image: medi,
-    basePrice: 800,
-    duration: "45 minutes",
+    name: "Haircut Services",
+    image: hair,
+    basePrice: 300,
+    duration: "30–60 minutes",
     description:
-      "Pamper your hands and feet with our professional medicure treatments. Our service includes nail shaping, cuticle care, exfoliation, moisturizing, and polishing to leave your nails healthy, clean, and beautiful.",
+      "Get the perfect look with our professional haircut services for men, women, and children. Our experienced stylists provide customized cuts to suit your face shape, hair type, and style preferences.",
     packages: [
-      { title: "Basic Medicure", price: 500, details: "Nail shaping and cuticle care" },
-      { title: "Standard Medicure", price: 800, details: "Basic medicure + exfoliation and moisturizing" },
-      { title: "Deluxe Medicure", price: 1200, details: "Standard medicure + polish and hand massage" },
+      { title: "Basic Trim", price: 300, details: "Quick ends trimming and shaping" },
+      { title: "Layered Cut", price: 600, details: "Multi-length layers for added volume" },
+      { title: "Style & Blow Dry", price: 900, details: "Professional styling with blow-dry finish" },
     ],
     addons: [
-      { title: "Gel Polish", price: 400 },
-      { title: "Paraffin Wax Treatment", price: 350 },
-      { title: "Nail Art", price: 200 },
+      { title: "Hair Wash", price: 150 },
+      { title: "Scalp Massage", price: 200 },
+      { title: "Fringe/Bangs Cut", price: 100 },
     ],
   };
 
   return (
     <div className="min-h-screen bg-emerald-100 text-[#333]">
       <div className="flex flex-col lg:flex-row">
-        {/* Left Side: Fixed Image */}
+        {/* Left Side: Sticky Image */}
         <div className="lg:w-1/2 w-full h-96 lg:h-screen sticky top-0 z-10">
           <img
             src={service.image}
@@ -34,13 +34,13 @@ const Medicure = () => {
           />
         </div>
 
-        {/* Right Side: Scrollable Info */}
+        {/* Right Side: Content */}
         <div className="lg:w-1/2 w-full px-6 py-10 space-y-8">
           <h1 className="text-4xl font-extrabold text-center lg:text-left">{service.name}</h1>
 
           <div className="space-y-6 bg-white p-6 rounded-lg shadow">
             <p className="text-lg">{service.description}</p>
-            <p className="text-lg font-semibold">Standard Duration: {service.duration}</p>
+            <p className="text-lg font-semibold">Estimated Duration: {service.duration}</p>
             <p className="text-xl font-bold text-green-700">Base Price: ₹{service.basePrice}</p>
 
             <div>
@@ -78,4 +78,4 @@ const Medicure = () => {
   );
 };
 
-export default Medicure;
+export default Haircut;

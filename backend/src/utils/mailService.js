@@ -1,5 +1,10 @@
-const nodemailer=require('nodemailer') //task -07-08-2025
+const express = require("express");
+const cors = require("cors");
+const nodemailer = require("nodemailer");
 require('dotenv').config()
+const app = express();
+app.use(cors());
+app.use(express.json());
 const  pass=process.env.MAIL_PASS
 const user_mail=process.env.USER_MAIL
 //const receiver=process.env.RECEIVER_MAIL
