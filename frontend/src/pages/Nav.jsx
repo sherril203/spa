@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { IoClose } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
@@ -41,10 +42,10 @@ const Nav = () => {
 
         {/* Mobile Menu Button */}
         <button
+    
           className="md:hidden text-gray-700 text-2xl font-bold"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? "✖" : "☰"}
+         onClick={() => setOpen(!open)}>
+      {open ? <IoClose/> : <RxHamburgerMenu />}
         </button>
       </div>
 

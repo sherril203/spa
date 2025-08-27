@@ -1,5 +1,5 @@
 import React from "react";
-import doImage from "../assets/do.jpg";
+import doImage from "../../assets/do.jpg";
 
 const Card = () => {
   return (

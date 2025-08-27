@@ -4,15 +4,18 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMailUnread } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import map from "../assets/map.jpg";
+import { FaTwitter } from "react-icons/fa";
 import Nav from './Nav'
 import Footer from './Footer'
+import Testinomial from './Testinomial/Testinomial'
 
 const Contact = () => {
   return (
     <div>
       <Nav/>
+      <Testinomial/>
     <div className="bg-[#7EDC90] p-6 ">
-      
+       
       <h2 className="text-center font-bold text-3xl md:text-4xl text-emerald-800 mb-10">
         Contact Us
       </h2>
@@ -50,6 +53,9 @@ const Contact = () => {
                 size={35}
                 className="cursor-pointer hover:text-blue-600 transition-colors"
               />
+              <FaTwitter
+              size={35}
+                className="cursor-pointer hover:text-cyan-400 transition-colors" />
             </div>
           </div>
         </div>
@@ -64,6 +70,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+   
      <Footer/>
     </div>
   );

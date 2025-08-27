@@ -1,7 +1,7 @@
 import React from "react";
-import to from "../assets/spa.jpg";
-import jo from "../assets/hair.jpg";
-import lo from "../assets/make.jpg";
+import to from "../../assets/spa.jpg";
+import jo from "../../assets/hair.jpg";
+import lo from "../../assets/make.jpg";
 import { Link } from "react-router-dom";
 
 const Card2 = () => {

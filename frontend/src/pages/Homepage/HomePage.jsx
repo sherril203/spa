@@ -1,19 +1,17 @@
 import React from "react";
-import spaImage from "../assets/spato.jpg"; 
+import spaImage from "../../assets/spato.png"; 
 import Card from "./Card";
 import Card2 from "./Cardmain";
 import { Link } from "react-router-dom";
-import Nav from './Nav'
-import Footer from './Footer'
+import Nav from '../Nav'
+import Footer from '../Footer'
 
 const HomePage = () => {
   return (
     
     <section className="bg-[#7EDC90]">
         <Nav/>
-        <div>
-            
-        </div>
+      
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Side - Text */}

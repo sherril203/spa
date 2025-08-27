@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import medi from '../../assets/nailing.jpg';
-
+import Nav from '../Nav'
+import Footer from '../Footer'
 const Medicure = () => {
   const service = {
     name: "Medicure",
@@ -23,7 +24,8 @@ const Medicure = () => {
   };
 
   return (
-    <div className="min-h-screen bg-emerald-100 text-[#333]">
+    <div className="min-h-screen bg-[#7EDC90] text-[#333]">
+      <Nav/>
       <div className="flex flex-col lg:flex-row">
         {/* Left Side: Fixed Image */}
         <div className="lg:w-1/2 w-full h-96 lg:h-screen sticky top-0 z-10">
@@ -74,6 +76,7 @@ const Medicure = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Haircut = () => {
   };
 
   return (
-    <div className="min-h-screen bg-emerald-100 text-[#333]">
+    <div className="min-h-screen bg-[#7EDC90] text-[#333]">
       <Nav/>
       <div className="flex flex-col lg:flex-row">
         {/* Left Side: Sticky Image */}

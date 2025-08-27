@@ -6,21 +6,23 @@ import makeup from '../../assets/makeup.png'
 import hair from '../../assets/haircut.jpg'
 import Nav from '../Nav'
 import Footer from '../Footer'
+import {Link} from 'react-router-dom'
 const Service = () => {
     
     const Services = [
-  { name: "Massage", img: massage,  },
-  { name: "Haircut", img: hair,  },
-  { name: "Makeup", img: makeup, },
-  { name: "Waxing", img: wax,  },
-  { name: "Medicure", img: medi,  }
+  { name: "Massage", img: massage, path:"massage"  },
+  { name: "Haircut", img: hair, path:"haircut" },
+  { name: "Makeup", img: makeup,path:"makeup" },
+  { name: "Waxing", img: wax, path:"waxing" },
+  { name: "Medicure", img: medi, path:"medicure" }
 ];
 
     
  return (
-  
-    <div className="bg-[#f7f4ef] min-h-screen py-1 px-4 sm:px-8">
-      <Nav/>
+   <div className='bg-[#7EDC90]  '>
+     <Nav/>
+     <div className=" p-6">
+     
       <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-[#333] mb-10">
         Our Services
       </h2>
@@ -37,15 +39,18 @@ const Service = () => {
               alt={item.name}
               className="w-full h-64 object-cover rounded-t-xl"
             />
-             <Link to={`/Service/${item.path}`} 
+             <Link to={`/${item.path}`} 
                className="block ">
              <h2 className="text-xl font-semibold text-center py-4 text-[#444]">{item.name}</h2>
             </Link>
           </div>
         ))}
       </div>
-      <Footer/>
     </div>
+      <Footer/>
+   </div>
+  
+    
   )
 }
 

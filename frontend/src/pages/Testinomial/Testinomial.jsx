@@ -56,7 +56,7 @@ const Testinomial = () => {
   }, []);
 
   return (
-    <div className="bg-emerald-50 min-h-screen flex flex-col justify-center items-center px-4 py-10">
+    <div className="bg-emerald-200 min-h-screen flex flex-col justify-center items-center px-4 py-10">
       <ToastContainer/>
       <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-md w-full max-w-lg">
         <h2 className="text-center font-bold text-3xl text-emerald-800 mb-6">
