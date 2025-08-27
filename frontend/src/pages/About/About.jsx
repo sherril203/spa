@@ -2,7 +2,7 @@ import React from "react";
 import massage1 from "../../assets/massage1.jpg"
 import massage2 from "../../assets/spa.jpg"
 import { FaBullseye, FaInfinity, FaCube } from "react-icons/fa";
-import Us from "./About2";
+import AboutSection from "./AboutSection";
 import Nav from '../Nav'
 import Footer from '../Footer'
 const About = () => {
@@ -88,7 +88,7 @@ const About = () => {
       </div>
       
     </section>
-   <Us/>
+   <AboutSection/>
    <Footer/>
    </div>
   );
