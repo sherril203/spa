@@ -1,9 +1,11 @@
 import React from 'react'
-import massage from '../assets/massage.jpg'
-import medi from '../assets/nailing.jpg'
-import wax from '../assets/waxing.jpg'
-import makeup from '../assets/makeup.png'
-import hair from '../assets/haircut.jpg'
+import massage from '../../assets/massage.jpg'
+import medi from '../../assets/nailing.jpg'
+import wax from '../../assets/waxing.jpg'
+import makeup from '../../assets/makeup.png'
+import hair from '../../assets/haircut.jpg'
+import Nav from '../Nav'
+import Footer from '../Footer'
 const Service = () => {
     
     const Services = [
@@ -16,7 +18,9 @@ const Service = () => {
 
     
  return (
-    <div className="bg-emerald-100 min-h-screen py-1 px-4 sm:px-8">
+  
+    <div className="bg-[#f7f4ef] min-h-screen py-1 px-4 sm:px-8">
+      <Nav/>
       <h2 className="text-center text-4xl sm:text-5xl font-extrabold text-[#333] mb-10">
         Our Services
       </h2>
@@ -40,6 +44,7 @@ const Service = () => {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   )
 }

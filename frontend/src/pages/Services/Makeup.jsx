@@ -1,28 +1,26 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
-import massage from '../assets/massage.jpg';
-
-const Massage = () => {
-  const service = {
-    name: "Relaxing Full Body Massage",
-    image: massage,
-    basePrice: 1000,
-    duration: "60 minutes",
+import makeup from '../../assets/makeup.png'
+const Makeup = () => {
+      const service = {
+    name: "Makeup Services",
+    image: makeup,
+    basePrice: 1200,
+    duration: "60–90 minutes",
     description:
-      "A rejuvenating massage experience designed to relieve stress, improve circulation, and relax your body using essential oils and soft tissue techniques.",
+      "Enhance your natural beauty with our professional makeup services. Whether it's for a casual event, party, bridal ceremony, or a photoshoot — we use high-quality products tailored to your skin type and style preference.",
     packages: [
-      { title: "30-minute Express Massage", price: 600 },
-      { title: "60-minute Full Body Massage", price: 1000 },
-      { title: "90-minute Deep Relaxation Massage", price: 1400 },
+      { title: "Casual Day Makeup", price: 1200, details: "Light makeup for daily outings or office" },
+      { title: "Party Makeup", price: 1800, details: "Full face glam with eye enhancements" },
+      { title: "Bridal Makeup", price: 5000, details: "HD/airbrush makeup, lashes, contouring, and long-lasting finish" },
     ],
     addons: [
-      { title: "Aromatherapy Oils", price: 200 },
-      { title: "Hot Stone Therapy", price: 300 },
-      { title: "Scalp Massage", price: 150 },
+      { title: "False Eyelashes", price: 300 },
+      { title: "Hair Styling", price: 800 },
+      { title: "HD Makeup Upgrade", price: 1000 },
     ],
   };
-
-   return (
+  return (
       <div className="min-h-screen bg-emerald-100 text-[#333]">
         <div className="flex flex-col lg:flex-row">
           {/* Left Side: Fixed Image */}
@@ -76,6 +74,6 @@ const Massage = () => {
         </div>
       </div>
     );
-};
+}
 
-export default Massage;
+export default Makeup

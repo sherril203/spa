@@ -1,19 +1,21 @@
 import { Routes, Route } from "react-router-dom";
 import Testinomial from "./Testinomial";
-import Service from "./Service";
+import Service from "./Services/Service";
 import Contact from "./Contact";
 import BookAppointment from "./BookAppointment";
-import Massage from "./Massage";
+import Massage from "./Services/Massage";
 import ServiceHome from "./ServiceHome";
-import Medicure from "./Medicure";
-import Makeup from "./Makeup";
+import Medicure from "./Services/Medicure";
+import Makeup from "./Services/Makeup";
 import Waxing from "./Waxing";
-import Haircut from "./Haircut";
+import Haircut from "./Services/Haircut";
+import HomePage from "./HomePage";
 
 const Router = () => {
   return (
     <Routes>
-      {/* <Route path="/Service" element={<Service />}/> */}
+      <Route path="/home" element={<HomePage/>} />
+      <Route path="/services" element={<Service />}/>
       <Route path="/contact" element={<Contact/>} />
       <Route path="/testinomial" element={<Testinomial />} />
       <Route path="/book-appointment" element={<BookAppointment />} />
@@ -24,9 +26,8 @@ const Router = () => {
         <Route path="/waxing" element={<Waxing/>}/>
         <Route path="/haircut" element={<Haircut/>}/>
 
-       <Route path="/Service" element={<Service />}>
-        {/* <Route path="/Service/massage" element={<Massage />} /> */}
-       </Route>
+       
+        
     </Routes>
   );
 };

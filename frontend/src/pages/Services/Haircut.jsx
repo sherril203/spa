@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hair from '../assets/haircut.jpg';
+import hair from '../../assets/haircut.jpg';
+import Nav from '../Nav'
+import Footer from '../Footer'
 
 const Haircut = () => {
   const service = {
@@ -24,6 +26,7 @@ const Haircut = () => {
 
   return (
     <div className="min-h-screen bg-emerald-100 text-[#333]">
+      <Nav/>
       <div className="flex flex-col lg:flex-row">
         {/* Left Side: Sticky Image */}
         <div className="lg:w-1/2 w-full h-96 lg:h-screen sticky top-0 z-10">
@@ -74,6 +77,7 @@ const Haircut = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -4,10 +4,15 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMailUnread } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import map from "../assets/map.jpg";
+import Nav from './Nav'
+import Footer from './Footer'
 
 const Contact = () => {
   return (
-    <div className="bg-emerald-50 p-6 md:p-12 min-h-screen">
+    <div>
+      <Nav/>
+    <div className="bg-[#7EDC90] p-6 ">
+      
       <h2 className="text-center font-bold text-3xl md:text-4xl text-emerald-800 mb-10">
         Contact Us
       </h2>
@@ -59,7 +64,10 @@ const Contact = () => {
         </div>
       </div>
     </div>
+     <Footer/>
+    </div>
   );
+ 
 };
 
 export default Contact;

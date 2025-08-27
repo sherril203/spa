@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import medi from '../assets/nailing.jpg';
+import medi from '../../assets/nailing.jpg';
 
 const Medicure = () => {
   const service = {
