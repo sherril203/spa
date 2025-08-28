@@ -5,6 +5,7 @@ import { IoIosMailUnread } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import map from "../assets/map.jpg";
 import { FaTwitter } from "react-icons/fa";
+import { ImYoutube } from "react-icons/im";
 import Nav from './Nav'
 import Footer from './Footer'
 
@@ -55,6 +56,9 @@ const Contact = () => {
               <FaTwitter
               size={35}
                 className="cursor-pointer hover:text-cyan-400 transition-colors" />
+              <ImYoutube
+              size={35}
+                className="cursor-pointer hover:text-red-500 transition-colors" />
             </div>
           </div>
         </div>

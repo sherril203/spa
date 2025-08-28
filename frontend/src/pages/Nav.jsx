@@ -52,9 +52,8 @@ const Nav = () => {
           <Link to="/home" className="block hover:text-[#9D7C5B]">Home</Link>
           <Link to="/about" className="block hover:text-[#9D7C5B]">About Us</Link>
           <Link to="/services" className="block hover:text-[#9D7C5B]">Services</Link>
-          <Link to="/blog" className="block hover:text-[#9D7C5B]">Blog</Link>
-          <Link to="/pages" className="block hover:text-[#9D7C5B]">Pages</Link>
           <Link to="/contact" className="block hover:text-[#9D7C5B]">Contact Us</Link>
+          <Link to="/testinomial" className="block hover:text-[#9D7C5B]">testinomial</Link>
         </div>
       )}
     </nav>
