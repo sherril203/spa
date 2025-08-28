@@ -5,6 +5,7 @@ import Card2 from "./Cardmain";
 import { Link } from "react-router-dom";
 import Nav from '../Nav'
 import Footer from '../Footer'
+import AboutMain from "../About/AboutMain";
 
 const HomePage = () => {
   return (
@@ -50,6 +51,7 @@ const HomePage = () => {
       </div>
       <Card/>
       <Card2/>
+      <AboutMain/>
       <Footer/>
     </section>
   );
