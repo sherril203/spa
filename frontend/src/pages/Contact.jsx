@@ -7,13 +7,12 @@ import map from "../assets/map.jpg";
 import { FaTwitter } from "react-icons/fa";
 import Nav from './Nav'
 import Footer from './Footer'
-import Testinomial from './Testinomial/Testinomial'
+
 
 const Contact = () => {
   return (
     <div>
       <Nav/>
-      <Testinomial/>
     <div className="bg-[#7EDC90] p-6 ">
        
       <h2 className="text-center font-bold text-3xl md:text-4xl text-emerald-800 mb-10">

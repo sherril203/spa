@@ -30,13 +30,10 @@ const Nav = () => {
             <Link to="/services" className="hover:text-orange-900">Services</Link>
           </li>
           <li>
-            <Link to="/blog" className="hover:text-orange-900">Blog</Link>
-          </li>
-          <li>
-            <Link to="/pages" className="hover:text-orange-900">Pages</Link>
-          </li>
-          <li>
             <Link to="/contact" className="hover:text-orange-900">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/testinomial" className="hover:text-orange-900">Testinomial</Link>
           </li>
         </ul>
 

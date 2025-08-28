@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import Testinomial from "./Testinomial/Testinomial";
 import Service from "./Services/Service";
 import Contact from "./Contact";
 import BookAppointment from "./BookAppointment/BookAppointment";
@@ -10,6 +9,7 @@ import Waxing from "./Services/Waxing";
 import Haircut from "./Services/Haircut";
 import HomePage from "./Homepage/HomePage";
 import About from "./About/About";
+import TestinomialPage from "./Testinomial/TestinomialPage";
 
 const Router = () => {
   return (
@@ -18,7 +18,7 @@ const Router = () => {
         <Route path="/about" element={<About/>}/>
       <Route path="/services" element={<Service />}/>
       <Route path="/contact" element={<Contact/>} />
-      <Route path="/testinomial" element={<Testinomial />} />
+      <Route path="/testinomial" element={<TestinomialPage />} />
       <Route path="/book-appointment" element={<BookAppointment />} />
       <Route path="/massage" element={<Massage />} />
       <Route path="/medicure" element={<Medicure/>}/>
