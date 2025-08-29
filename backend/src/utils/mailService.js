@@ -1,77 +1,58 @@
-const express = require("express");
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-require("dotenv").config();
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+// // Function to send appointment confirmation email
+// const sendAppointmentMail = async (name, to, appointmentDate) => {
+//   console.log("to email :", to);
+//   const mailOptions = {
+//     from: user_mail, // Sender email
+//     to: to,          // Recipient email
+//     subject: "Your Appointment Confirmation",
+//     text: `
+//       Hi ${name},
 
-const pass = process.env.MAIL_PASS;
-const user_mail = process.env.USER_MAIL;
+//       Thank you for booking an appointment with us.
+//       You have booked an appointment on ${appointmentDate}.
 
-// Create reusable transporter object
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: user_mail,
-    pass: pass,
-  },
-});
+//       We look forward to seeing you!
 
-// Utility function to send email
-const sendAppointmentMail = async (formData) => {
-  const { name, email, mobile_no, gender, Service, Appointment_date } = formData;
-  
-  const mailOptions = {
-    from: user_mail,       // Your email (sender)
-    to: email,             // ✅ Sends email to the user who booked
-    subject: "Your Appointment Confirmation",
-    text: `
-Hi ${name},
+//       Best regards,
+//       [Your Spa Name]
+//     `,
+//   };
 
-Thank you for booking an appointment with us.
 
-Here are your appointment details:
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
-Name: ${name}
-Email: ${email}
-Mobile No: ${mobile_no}
-Gender: ${gender}
-Service: ${Service}
-Appointment Date: ${Appointment_date}
 
-We look forward to seeing you!
+const user_mail  =  process.env.USER_MAIL;
+const mail_pass = process.env.MAIL_PASS;
 
-Best regards,
-[Your Spa Name]
-    `,
-  };
+const transport = nodemailer.createTransport({
+    service : 'gmail',
+    auth:{
+        user: user_mail,
+        pass : mail_pass
+    },
+})
 
-  try {
-    const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.response);
-    return { success: true, info };
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return { success: false, error };
-  }
+const sendMailer = async(to,subject,data) =>{
+    try{
+        const mailoptions = {
+            from: user_mail,
+            to,
+            subject,
+            data  ,
+            text:"thank you for booking appointment"
+        }
+
+        const info = await transport.sendMail(mailoptions)
+        console.log("email send",info.response)
+        return info
+    }catch(error){
+        console.log("error sending email : " ,error)
+        throw error
+    };
 };
 
 
-// Route to handle appointment form submission
-app.post("/postAppointment", async (req, res) => {
-  const formData = req.body;
-
-  const result = await sendAppointmentMail(formData);
-
-  if (result.success) {
-    res.status(200).json({ message: "Appointment booked and email sent", data: formData });
-  } else {
-    res.status(500).json({ message: "Failed to send email", error: result.error });
-  }
-});
-
-app.listen(4050, () => {
-  console.log("Server running on http://localhost:4050");
-});
+module.exports = sendMailer

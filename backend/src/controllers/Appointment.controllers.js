@@ -1,21 +1,38 @@
+const sendMailer = require("../../../backend/src/utils/mailService");
 const AppointmentModel = require("../model/Appointment.model");
 
 const postAppointment = async (req, res) => {
   try {
     console.log("Incoming data:", req.body); // debug
 
+    // Save appointment
     const stored_data = new AppointmentModel(req.body);
-    await stored_data.save();
+    console.log('appointment book : ',req.body);  
+    // await stored_data.save();
+
+    // Send email
+    const { name, email, ...restof } = req.body;
+    console.log(name,email,restof);
+    const mailResult = await sendMailer(email,"sample mail",restof);
+
+    if (!mailResult) {
+      console.error("Email failed:", mailResult.error);
+      return res.status(500).send({
+        message: "Appointment booked, but email failed to send",
+        data: stored_data,
+      });
+    }
 
     return res.status(200).send({
-      message: "Appointment booked",
+      message: "Appointment booked and confirmation email sent",
       data: stored_data,
     });
   } catch (err) {
     console.error("Error saving appointment:", err);
-    return res.status(500).send("error in appointment");
+    return res.status(500).send("Error in appointment");
   }
 };
+
 
 const getAppointment = async (req, res) => {
   try {
