@@ -1,7 +1,7 @@
 const QueriesModel = require("../model/queries.model");
 
 const postQueries = async (req, res) => {
-  try {
+  try {        
     const Queries_data = req.body;
     console.log("Incoming query data:", Queries_data); // debug
 

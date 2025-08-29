@@ -8,7 +8,7 @@ const postAppointment = async (req, res) => {
     // Save appointment
     const stored_data = new AppointmentModel(req.body);
     console.log('appointment book : ',req.body);  
-    // await stored_data.save();
+    await stored_data.save();
 
     // Send email
     const { name, email, ...restof } = req.body;
