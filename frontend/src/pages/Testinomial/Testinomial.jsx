@@ -17,7 +17,7 @@ const Testinomial = () => {
 
     try {
       const response = await axios.post("http://localhost:4050/postquery", formdata);
-      toast.success("Your feedback/query has been submitted");
+      toast.success("Your feedback has been submitted");
 
       const newItem = response.data.data || response.data;
       setData((prev) => (Array.isArray(prev) ? [...prev, newItem] : [newItem]));
@@ -61,7 +61,7 @@ const Testinomial = () => {
       <ToastContainer/>
       <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-md w-full max-w-lg">
         <h2 className="text-center font-bold text-3xl text-emerald-800 mb-6">
-          Feedback / Queries Form
+          Feedback
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -92,12 +92,12 @@ const Testinomial = () => {
           </div>
 
           <div>
-            <label className="block text-lg text-gray-700 mb-1">Queries / Complaint</label>
+            <label className="block text-lg text-gray-700 mb-1">feedback</label>
             <textarea
-              name="queries"
+              name="feedback"
               rows="4"
               placeholder="Enter your queries or complaints"
-              value={formdata.queries}
+              value={formdata.feedback}
               onChange={handleChange}
               className="p-3 border border-gray-300 w-full rounded resize-none focus:outline-none focus:ring-2 focus:ring-emerald-300"
               required
