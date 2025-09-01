@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import Service from "./Services/Service";
+import Service from "../pages/Services/Service";
 import Contact from "./Contact";
-import BookAppointment from "./BookAppointment/BookAppointment";
-import Massage from "./Services/Massage";
-import Medicure from "./Services/Medicure";
-import Makeup from "./Services/Makeup";
-import Waxing from "./Services/Waxing";
-import Haircut from "./Services/Haircut";
-import HomePage from "./Homepage/HomePage";
-import About from "./About/About";
-import TestinomialPage from "./Testinomial/TestinomialPage";
+import BookAppointment from "../pages/BookAppointment/BookAppointment";
+import Massage from "../pages/Services/Massage";
+import Medicure from "../pages/Services/Medicure";
+import Makeup from "../pages/Services/Makeup";
+import Waxing from "../pages/Services/Waxing";
+import Haircut from "../pages/Services/Haircut";
+import HomePage from "../pages/Homepage/HomePage";
+import About from "../pages/About/About";
+import TestinomialPage from "../pages/Testinomial/TestinomialPage";
 
 const Router = () => {
   return (
