@@ -5,7 +5,7 @@ import medi from '../../assets/nailing.jpg'
 import wax from '../../assets/waxing.jpg'
 import makeup from '../../assets/makeup.png'
 import hair from '../../assets/haircut.jpg'
-import Nav from '../Nav'
+import Nav from '../../common/Nav'
 import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
