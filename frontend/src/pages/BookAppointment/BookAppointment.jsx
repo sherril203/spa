@@ -11,13 +11,13 @@ const BookAppointment = () => {
     Service:"",
     Appointment_date: "",
   });
-
+ const BACKEND_API=import.meta.BACKEND_API
   // POST API
 const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post("http://localhost:4050/postAppointment", formdata);
+    const response = await axios.post(`${BACKEND_API}/postAppointment`, formdata);
     console.log(response.data.data)
   //alert("Appointment booked successfully!");
     toast.success("Appointment booked successfully!");

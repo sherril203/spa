@@ -9,14 +9,14 @@ const Testinomial = () => {
     email: "",
     queries: "",
   });
-
+ const BACKEND_API=import.meta.BACKEND_API
   // POST API
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formdata);
 
     try {
-      const response = await axios.post("http://localhost:4050/postquery", formdata);
+      const response = await axios.post(`${BACKEND_API}/postquery`, formdata);
       toast.success("Your feedback has been submitted");
 
       const newItem = response.data.data || response.data;
