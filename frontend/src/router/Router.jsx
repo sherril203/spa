@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Service from "../pages/Services/Service";
-import Contact from "./Contact";
+import Contact from "../Conatct/Contact";
 import BookAppointment from "../pages/BookAppointment/BookAppointment";
 import Massage from "../pages/Services/Massage";
 import Medicure from "../pages/Services/Medicure";
