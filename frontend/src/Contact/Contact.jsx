@@ -6,8 +6,8 @@ import { FaPhoneAlt } from "react-icons/fa";
 import map from "../assets/map.jpg";
 import { FaTwitter } from "react-icons/fa";
 import { ImYoutube } from "react-icons/im";
-import Nav from '../common/Nav'
-import Footer from '../common/Footer'
+import Nav from '../../common/Nav'
+import Footer from '../../common/Footer'
 
 
 const Contact = () => {

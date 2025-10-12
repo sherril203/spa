@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import makeup from '../../assets/makeup.png'
-import Nav from '../common/Nav'
-import Footer from '../common/Footer'
+import Nav from '../../common/Nav'
+import Footer from '../../common/Footer'
 const Makeup = () => {
       const service = {
     name: "Makeup Services",

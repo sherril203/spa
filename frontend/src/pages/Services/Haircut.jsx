@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import hair from '../../assets/haircut.jpg';
-import Nav from '../common/Nav'
-import Footer from '../common/Footer'
+import Nav from '../../common/Nav'
+import Footer from '../../common/Footer'
 
 const Haircut = () => {
   const service = {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import massage from '../../assets/massage.jpg';
-import Nav from '../common/Nav'
-import Footer from '../common/Footer'
+import Nav from '../../common/Nav'
+import Footer from '../../common/Footer'
 const Massage = () => {
   const service = {
     name: "Relaxing Full Body Massage",

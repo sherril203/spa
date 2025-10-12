@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import medi from '../../assets/nailing.jpg';
-import Nav from '../common/Nav'
-import Footer from '../common/Footer'
+import Nav from '../../common/Nav'
+import Footer from '../../common/Footer'
 const Medicure = () => {
   const service = {
     name: "Medicure",
