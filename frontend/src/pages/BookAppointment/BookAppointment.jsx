@@ -11,7 +11,7 @@ const BookAppointment = () => {
     Service:"",
     Appointment_date: "",
   });
- const BACKEND_API=import.meta.BACKEND_API
+ const BACKEND_API=import.meta.env.BACKEND_API
   // POST API
 const handleSubmit = async (e) => {
   e.preventDefault();
