@@ -3,7 +3,7 @@ import spaImage from "../../assets/spato.png";
 import Card from "./Card";
 import Card2 from "./Cardmain";
 import { Link } from "react-router-dom";
-import Nav from '../Nav'
+import Nav from '../../common/Nav'
 import Footer from '../Footer'
 import AboutMain from "../About/AboutMain";
 
