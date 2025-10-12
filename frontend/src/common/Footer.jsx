@@ -8,7 +8,7 @@ const Foot = () => {
         <div>
           <h2 className="text-xl font-semibold text-orange-600 mb-4">Links</h2>
           <ul className="space-y-2 text-gray-700">
-            <li><a href="/home" className="hover:text-orange-500">Home</a></li>
+            <li><a href="/" className="hover:text-orange-500">Home</a></li>
             <li><a href="/about" className="hover:text-orange-500">About us</a></li>
              <li><a href="/services" className="hover:text-orange-500">Services</a></li>
             <li><a href="/contact" className="hover:text-orange-500">Contact</a></li>

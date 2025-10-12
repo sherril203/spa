@@ -14,7 +14,7 @@ import TestinomialPage from "../pages/Testinomial/TestinomialPage";
 const Router = () => {
   return (
     <Routes>
-      <Route path="/home" element={<HomePage/>} />
+      <Route path="/" element={<HomePage/>} />
         <Route path="/about" element={<About/>}/>
       <Route path="/services" element={<Service />}/>
       <Route path="/contact" element={<Contact/>} />

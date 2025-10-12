@@ -49,7 +49,7 @@ const Nav = () => {
       {/* Mobile Dropdown */}
       {open && (
         <div className="md:hidden bg-[#f7f4ef] px-6 py-4 space-y-4 font-medium text-gray-700">
-          <Link to="/home" className="block hover:text-[#9D7C5B]">Home</Link>
+          <Link to="/" className="block hover:text-[#9D7C5B]">Home</Link>
           <Link to="/about" className="block hover:text-[#9D7C5B]">About Us</Link>
           <Link to="/services" className="block hover:text-[#9D7C5B]">Services</Link>
           <Link to="/contact" className="block hover:text-[#9D7C5B]">Contact Us</Link>
