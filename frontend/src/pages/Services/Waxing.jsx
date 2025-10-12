@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import wax from '../../assets/waxing.jpg';
-import Nav from '../Nav'
-import Footer from '../Footer'
+import Nav from '../common/Nav'
+import Footer from '../common/Footer'
 const Waxing = () => {
   const service = {
     name: "Waxing Services",
