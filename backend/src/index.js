@@ -11,8 +11,6 @@ mongoose.connect(mongodb_uri).then(()=>{
 }).catch((err)=>{
   console.log("mongodb error",err)
 })
-server.get('/', (req, res) => {
-  res.send('API is running ✅');
-});
+
 
 
