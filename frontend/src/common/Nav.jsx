@@ -21,7 +21,7 @@ const Nav = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 font-medium text-gray-700">
           <li>
-            <Link to="/home" className="hover:text-orange-900">Home</Link>
+            <Link to="/" className="hover:text-orange-900">Home</Link>
           </li>
           <li>
             <Link to="/about" className="hover:text-orange-900">About Us</Link>
