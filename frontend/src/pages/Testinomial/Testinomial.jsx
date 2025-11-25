@@ -37,7 +37,7 @@ const Testinomial = () => {
   // GET API
   const getFeedback = async () => {
     try {
-      const response = await axios.get("http://localhost:4050/showquery");
+      const response = await axios.get(`${BACKEND_API}/showquery`);
       setData(response.data.data || []);
     } catch (error) {
       console.log("Error in get api", error.message);

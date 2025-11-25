@@ -50,7 +50,7 @@ const handleSubmit = async (e) => {
   // GET API
   const getAppointment = async () => {
     try {
-      const response = await axios.get("http://localhost:4050/showAppointments"); 
+      const response = await axios.get(`${BACKEND_API}/showAppointments`); 
       setData(response.data.data);
     } catch (error) {
       console.log("Error in get api", error.message);
